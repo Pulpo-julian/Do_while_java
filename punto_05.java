@@ -32,7 +32,7 @@ public class punto_05 {
                 }
             } else {
                 System.out.println("la cantidad de numeros menores de 15 son: " + cantMenores);
-                System.out.println("la cantidad de numeros entre 25 y 45 son: " + cantMenores);
+                System.out.println("la cantidad de numeros entre 25 y 45 son: " + rango);
                 System.out.println("la cantidad de numeros mayores de 50 son: " + cantMayores);
                 pregunta = 0;
             }

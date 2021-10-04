@@ -1,0 +1,280 @@
+//punto 1
+import java.util.Scanner;
+
+
+
+public class punto_01 {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int pregunta = 1, numeroIng = 0;
+        
+        
+        do {
+            
+            System.out.println("desea ingresar un numero?");        
+            System.out.println("1 es SI");
+            System.out.println("0 es NO");
+            pregunta = sc.nextInt();
+            
+            if (pregunta == 1){
+                System.out.println("ingrese un numero entre 0 y 999");
+                numeroIng = sc.nextInt();
+                if (numeroIng >= 100){
+                    System.out.println("el numero tiene 3 cifras \n");
+                } else if (numeroIng >=10) {
+                    System.out.println("el numero tiene 2 cifras \n");
+                } else {
+                    System.out.println("el numero tiene 1 cifra \n");
+                }
+            } else {
+                System.out.println("el programa ha finalizado");
+                pregunta = 0;
+            }
+            
+            
+        } while (pregunta == 1);
+        
+        
+        
+    }
+}
+//punto 2
+import java.util.Scanner;
+
+
+
+
+public class punto_02 {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int pregunta = 1, nota = 0, notasMay = 0, notasMen = 0;
+        
+        
+        do {
+            
+            System.out.println("desea ingresar una nota?");        
+            System.out.println("1 es SI");
+            System.out.println("0 es NO");
+            pregunta = sc.nextInt();
+            
+            if (pregunta == 1){
+                System.out.println("ingrese la nota");
+                nota = sc.nextInt();
+                if (nota >= 7){
+                    System.out.println("la nota es mayor igual a 7 \n");
+                    notasMay ++;
+                } else {
+                    System.out.println("la nota es menor que 7 \n");
+                    notasMen ++;
+                }
+            } else {
+                System.out.println("el programa ha finalizado");
+                System.out.println("ingresaste " + notasMay + " notas mayores o iguales a 7");
+                System.out.println("ingresaste " + notasMen + " notas menores a 7");
+                pregunta = 0;
+            }
+            
+            
+        } while (pregunta == 1);
+    }
+}
+// punto 3
+import java.util.Scanner;
+
+
+
+
+public class punto_03 {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int contador = 0, edad = 0;
+        
+        do {
+            System.out.println("ingrese una edad:");
+            edad = sc.nextInt();
+            contador = contador + edad;
+            System.out.println("el promedio de edades es de: " + contador);
+            if (contador > 25) {
+                System.out.println("el promedio de edades supera los 25");
+                System.out.println("el programa ha finalizado");
+            }
+        } while (contador < 25);
+        
+    }
+
+    
+}
+// punto 4
+import java.util.Scanner;
+
+
+public class punto_04 {
+    public static void main(String[] args) {
+        
+            
+        Scanner sc = new Scanner(System.in);
+
+        int pregunta = 1, sexo = 0, fem = 0, mas = 0 ;
+        int salarioIng = 0;
+        int salarioMayor = 0, salarioMenor = 0;
+        int promedioMayor = 0, promedioMenor = 0;
+        int cantMayores = 0, cantMenores = 0;
+        double proToMayores = 0, proToMenores = 0;
+
+        do {
+            System.out.println("desea ingresar un nuevo empleado? ");
+            System.out.println("1 es SI");
+            System.out.println("0 es NO");
+            pregunta = sc.nextInt();
+            if (pregunta == 1){
+                
+                System.out.println("ingrese el sexo del empleado");
+                System.out.println("1 es Femenino");
+                System.out.println("0 es Masculino");
+                sexo = sc.nextInt();
+                
+                if (sexo == 1) {
+                    fem ++;
+                } else if (sexo == 0) {
+                    mas ++;
+                }
+                
+                System.out.println("ingrese el salario del empleado: ");
+                salarioIng = sc.nextInt();
+                
+                //determino si el salario es el mayor o el menor de todos
+                if (salarioIng > salarioMayor){
+                    salarioMayor = salarioIng;
+                    promedioMayor = promedioMayor + salarioIng;
+                    cantMayores ++;
+                    
+                    if (salarioMenor == 0) {
+                        salarioMenor = salarioMayor;
+                    }
+                    
+                } else if (salarioIng < salarioMenor) {
+                    salarioMenor = salarioIng;
+                    promedioMenor = promedioMenor + salarioIng;
+                    cantMenores ++;
+                }
+                
+                
+                
+            } else {
+                
+                System.out.println("el programa finalizo");
+                System.out.println("el salario mayor es: " + salarioMayor);
+                System.out.println("el salario menor es: " + salarioMenor);
+                
+                proToMayores = promedioMayor / cantMayores;
+                proToMenores = promedioMenor / cantMenores;
+                
+                System.out.println("el promedio de salarios mayores es de: " + proToMayores);
+                System.out.println("el promedio de salarios menores es de: " + proToMenores);
+                System.out.println("---------");
+                System.out.println("la cantidad de empleadas Mujeres son: " + fem);
+                System.out.println("la cantidad de empleados Hombres son: " + mas);
+                
+                pregunta = 0;
+                
+            }
+            
+        } while (pregunta == 1);
+        
+    }
+    
+    
+}
+// punto 5
+import java.util.Scanner;
+
+
+public class punto_05 {
+    
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int pregunta = 1;
+        
+        int numeroIni;
+        int cantMenores = 0, cantMayores = 0, rango = 0;
+        
+
+        do {
+            System.out.println("desea ingresar un numero?");
+            System.out.println("1 es SI");
+            System.out.println("0 es NO");
+            pregunta = sc.nextInt();
+            
+            if (pregunta == 1) {
+                System.out.println("ingrese un numero natural cualquiera:");
+                numeroIni = sc.nextInt();
+                if (numeroIni > 50) {
+                    cantMayores ++;
+                } else if ((numeroIni >= 24) && (numeroIni <= 45)){
+                    rango ++;
+                } else if (numeroIni < 15) {
+                    cantMenores ++;
+                }
+            } else {
+                System.out.println("la cantidad de numeros menores de 15 son: " + cantMenores);
+                System.out.println("la cantidad de numeros entre 25 y 45 son: " + cantMenores);
+                System.out.println("la cantidad de numeros mayores de 50 son: " + cantMayores);
+                pregunta = 0;
+            }
+
+        } while (pregunta == 1);
+        
+    }
+    
+}
+// punto 6
+import java.util.Scanner;
+
+
+public class punto_06 {
+    public static void main(String[] args) {
+        
+        int dolares = 10;
+        int edad = 12;
+        
+        
+        do {
+            
+            dolares = dolares + (dolares * 2);
+            edad ++;
+            if (dolares >= 1000) {
+                System.out.println("la edad de la niña sera de: " + edad);
+                System.out.println("la cantidad de dinero que tendra es: " + dolares);
+            }
+            
+        } while (dolares < 1000);
+        
+        
+        
+        
+        
+    }
+            
+}
+// punto 7
+public class punto_07 {
+    public static void main(String[] args) {
+        
+        int galones = 10;
+        double conversion = 0;
+        
+        do {
+            conversion = galones * 3.785;
+            System.out.println( galones + " galones son " + conversion + " litros");
+            galones ++;
+        } while (galones <= 20);
+    }
+}
