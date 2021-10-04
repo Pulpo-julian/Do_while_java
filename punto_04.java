@@ -1,4 +1,4 @@
-
+// punto 4
 import java.util.Scanner;
 
 
@@ -41,9 +41,11 @@ public class punto_04 {
                     salarioMayor = salarioIng;
                     promedioMayor = promedioMayor + salarioIng;
                     cantMayores ++;
+                    
                     if (salarioMenor == 0) {
                         salarioMenor = salarioMayor;
                     }
+                    
                 } else if (salarioIng < salarioMenor) {
                     salarioMenor = salarioIng;
                     promedioMenor = promedioMenor + salarioIng;
